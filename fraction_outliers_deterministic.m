@@ -10,12 +10,15 @@ end
 function instantiated_transform = instantiated_transform(Xs, alpha)
 
   [n p] = size(Xs);
-  num_outliers_per_col = max(round(alpha * n), 0);
-  outliers = 10*(randi([0 1], [num_outliers_per_col p]) - 0.5);
-  idxs = logical([ones(num_outliers_per_col, 1); zeros(n - num_outliers_per_col, 1)]);
-  for col_idx = 1:p
-    Xs(idxs(randperm(n)), col_idx) = outliers(:, col_idx);
-  end
+  num_outliers = max(round(alpha * n), 0);
+
+
+  outliers = 5 * ones(p * num_outliers, 1);
+  outliers(randi([0 1]):2:end) = -5;
+  outliers = reshape(outliers, [p num_outliers]);
+
+  Xs(1:num_outliers, :) = outliers;
+
   instantiated_transform = Xs;
 
 end
