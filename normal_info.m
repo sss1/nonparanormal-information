@@ -20,6 +20,4 @@ function I = normal_info(Xs)
   normalization = prod(diag(cov(Xs)));
   I = -(log(det(cov(Xs))./normalization) - bias_correction)/2;% -sum(log(diag(chol(corr(Xs)))));
 
-  % TODO: Theoretical bias correction
-
 end
