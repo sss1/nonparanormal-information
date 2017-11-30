@@ -17,7 +17,7 @@ The following mutual information estimators used in the experiments are also inc
   4) Nonparanormal information estimator using Kendall's tau: nonparanormal_Kendall_info.m
   5) K-nearest neighbor information estimator (originally proposed by [4]) for fully nonparametric data (KNN_info.m&#42;)
 
-&#42; Note that KNN_info.m relies on Zoltán Szabó's on the Information Theoretical Estimators (ITE) Toolbox (https://bitbucket.org/szzoli/ite/)
+&#42; Note that KNN_info.m relies on Zoltán Szabó's Information Theoretical Estimators (ITE) Toolbox (https://bitbucket.org/szzoli/ite/)
 
 <h2>References</h2>
 
